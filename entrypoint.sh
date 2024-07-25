@@ -11,4 +11,4 @@ if [ ! -d /hugo/.git ]; then
     cd /hugo && git clone --recurse-submodules "${HUGO_REPO}" .
 fi
 
-exec hugo "$@"
+cd /hugo && exec hugo "$@"
